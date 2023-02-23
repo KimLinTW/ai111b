@@ -1,3 +1,4 @@
+# 此程式100%原創 未參考chatGPT、其他網站
 import matplotlib.pyplot as plt
 import numpy as np
 import random
