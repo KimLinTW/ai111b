@@ -27,12 +27,11 @@ def getDis(p1, p2):
     return dis
 
 def change(s):
-    # print(random.randint (1, 11)) # 1~10
+    # print(random.randint (1, 9)) # 1~8
     switch_idx = random.randint (1, 9)
-    temp = s[switch_idx]
-    temp2 = s[switch_idx+1]
+    temp = s[switch_idx+1]
     s[switch_idx+1] = s[switch_idx]
-    s[switch_idx] = temp2
+    s[switch_idx] = temp
     return s
 
 def getScore(s):
@@ -50,7 +49,6 @@ def getScore(s):
 def climbing(s, times, exit=2000):
     timer = 0
     best_score = 0
-    # 給予一個任意解
     for i in range(times):
         s2 = change(s.copy())
         scoreS  = getScore(s)
