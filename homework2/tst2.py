@@ -61,6 +61,6 @@ def climbing(s, times, exit=2000):
         else:
             timer += 1  
             if timer >= exit: break
-    print(scoreS)
+    print(best_score)
 
 climbing(s,100000)
