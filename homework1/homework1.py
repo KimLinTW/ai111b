@@ -1,3 +1,4 @@
+# 此程式100%原創 未參考chatGPT、其他網站
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -26,8 +27,7 @@ def climbing(x=0, y=0, points=[(0,0)]):
     return [best_x,best_y]
 
 def getDis(a,b, points, times=2):  # a,b 是 y=ax+b 的a、b
-    dis_record = []
-    if times!=2:print(f"y = {a}x + {b}")
+    # dis_record = []
     total = 0
     for point in points:
         x = point[0]
