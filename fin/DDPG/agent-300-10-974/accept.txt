@@ -1,0 +1,4 @@
+oad: 974
+epi     len     R
+avr_R  : 269.0
+avr_len: 262

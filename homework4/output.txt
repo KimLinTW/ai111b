@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\py2cs\ai111b\homework4\run.py", line 45, in <module>
+    create_cat_image('Hello, world!')
+  File "C:\Users\user\Desktop\py2cs\ai111b\homework4\run.py", line 26, in create_cat_image
+    ascii_val = ord(c)
+TypeError: ord() expected string of length 1, but int found
