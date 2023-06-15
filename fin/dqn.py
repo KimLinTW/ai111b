@@ -68,7 +68,6 @@ if not(os.path.isfile(f"./DQN/agent-{limit}-{stop2}-{load}/model.pt")):
         while True:
             # env.render()
             action = agent.act(obs)
-            input(type(obs))
             obs, reward, done, _ = env.step(action)
             R += reward # reward 是 單步獎勵!
             t += 1
@@ -99,12 +98,12 @@ avr_R  = []
 avr_len= []
 with agent.eval_mode():
     print(f"epi\tlen\tR")
-    for i in range(1000):
+    for i in range(100):
         obs = env.reset()
         R = 0
         t = 0
         while True:
-            # env.render()
+            env.render()
             action = agent.act(obs)
             obs, r, done, _ = env.step(action)
             R += r
@@ -113,7 +112,7 @@ with agent.eval_mode():
             reset = t == 500
             # agent.observe(obs, r, done, reset)
             if done or reset: break
-        if i%100 == 0: print(f"{i}\t{t}\t{int(R)}")
+        if i%10 == 0: print(f"{i}\t{t}\t{int(R)}")
         avr_R  .append(R)
         avr_len.append(t)
 
